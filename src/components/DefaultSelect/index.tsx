@@ -1,4 +1,4 @@
-type SelectOption = {
+export type SelectOption = {
   value: 'RJ' | 'PR' | 'SP' | 'BA'
   text: string
 }
