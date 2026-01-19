@@ -1,22 +1,17 @@
 import { Container } from './components/Container';
-import { Footer } from './components/Footer';
 import { Heading } from './components/Heading';
 import './styles/global.css';
 import './styles/themes.css';
 import { SelectOptions } from './components/SelectOptions';
+import { LoginForm } from './components/LoginForm';
 function App() {
  
 return (
   <div>
     <Heading/>
   <Container>
-  <SelectOptions>
-
-  </SelectOptions>
+    <LoginForm/>
   </Container>
-  <Footer/>
-
-  
 </div>
 )
 }
