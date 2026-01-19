@@ -1,0 +1,17 @@
+.button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.succes {
+  background-color: #1d920e;
+}
+
+.warning {
+  background-color: #c44f02;
+}
+
+.error {
+  background-color: #dc2626;
+}
