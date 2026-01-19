@@ -1,0 +1,19 @@
+.heading {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    max-width: 200rem;
+}
+.link {
+    display: flex;
+    gap: 5rem;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--text-over-info);
+}
+.head {
+    display: flex;
+    gap: 1rem;
+}

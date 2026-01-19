@@ -1,0 +1,65 @@
+:root {
+  /* Escala de cinza fria (azulada) – Dark */
+  --gray-100: #f5f7fb;
+  --gray-200: #e4e9f2;
+  --gray-300: #cfd7e6;
+  --gray-400: #8b97b3;
+  --gray-500: #6b7694;
+  --gray-600: #4e5772;
+  --gray-700: #353c52;
+  --gray-800: #1f2538;
+  --gray-900: #0f1424;
+
+  /* Azul primário */
+  --primary-light: #93c5fd;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+
+  /* Links */
+  --link-color: #3b82f6;
+  --link-hover: #1d4ed8;
+
+  /* Estados */
+  --success: #22c55e;
+  --warning: #facc15;
+  --error: #dc2626;
+  --info: #0ea5e9;
+
+  /* Texto sobre cores */
+  --text-over-primary: #ffffff;
+  --text-over-primary-dark: #ffffff;
+  --text-over-primary-light: #0f172a;
+  --text-over-success: #0f172a;
+  --text-over-warning: #0f172a;
+  --text-over-error: #ffffff;
+  --text-over-info: #0f172a;
+
+  /* Texto padrão */
+  --text-default: #f5f7fb;
+  --text-muted: #cfd7e6;
+
+  /* Estados desabilitados */
+  --disabled: #6b7694;
+  --text-disabled: #cfd7e6;
+}
+
+:root[data-theme='light'] {
+  /* Escala de cinza fria – Light */
+  --gray-100: #0f172a;
+  --gray-200: #1e293b;
+  --gray-300: #334155;
+  --gray-400: #475569;
+  --gray-500: #64748b;
+  --gray-600: #94a3b8;
+  --gray-700: #cbd5e1;
+  --gray-800: #e2e8f0;
+  --gray-900: #f8fafc;
+
+  /* Texto */
+  --text-default: #0f172a;
+  --text-muted: #475569;
+
+  /* Links */
+  --link-color: #2563eb;
+  --link-hover: #1e40af;
+}
