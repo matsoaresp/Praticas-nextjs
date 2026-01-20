@@ -1,14 +1,13 @@
-import FormBotaoEnviar from "./components/FormBotaoEnviar";
-import DefaultForm from "./components/FormButton";
-import FormUsuarioStatus from "./components/FormUsuarioStatus";
+import FormContador from "./components/FormContador";
+
 
 function App() {
  
 return (
   <div>
-   <FormBotaoEnviar>
-    
-   </FormBotaoEnviar>
+  <FormContador>
+
+  </FormContador>
 </div>
 )
 }

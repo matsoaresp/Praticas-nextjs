@@ -4,7 +4,6 @@ import Button from "../Button";
 
 export default function DefaultForm() {
 
-    const [isOnline, setIsOnline] = useState<boolean>(false)
     const [changeColors, setChangeColors] = useState<'succes' | 'error'>('succes')
 
 
