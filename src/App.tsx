@@ -1,12 +1,13 @@
-import DefaultForm from "./components/DefaultForm";
+import DefaultForm from "./components/FormButton";
+import FormUsuarioStatus from "./components/FormUsuarioStatus";
 
 function App() {
  
 return (
   <div>
-    <DefaultForm>
-
-    </DefaultForm>
+    <FormUsuarioStatus
+    
+    ></FormUsuarioStatus>
 </div>
 )
 }
