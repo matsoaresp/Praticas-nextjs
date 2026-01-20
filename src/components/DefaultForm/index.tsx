@@ -1,31 +1,24 @@
 import { useState } from "react";
-import Greeting from "../Greeting";
+import OnlineStatus from "../OnlineStatus";
+
 
 
 
 export default function DefaultForm() {
 
-    const [nome, setNome] = useState(undefined);
+    const [isOnline, setIsOnline] = useState<boolean>(false)
+
 
     return (
         <div>
             <form>
                 <div>
                     <label>Nome</label>
-
-                    <input
-                        type="text"
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}
-                    />
                 </div>
-
-                <Greeting
-                name={nome}>
-
-                </Greeting>
-
-                <button type="submit">Entrar</button>
+                <button type="button" onClick={() => setIsOnline(!isOnline)}>Entrar</button>
+                <OnlineStatus
+                isOnline = {isOnline}
+                ></OnlineStatus>
             </form>
         </div>
     );
