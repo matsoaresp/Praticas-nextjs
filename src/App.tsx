@@ -1,3 +1,4 @@
+import FormBotaoEnviar from "./components/FormBotaoEnviar";
 import DefaultForm from "./components/FormButton";
 import FormUsuarioStatus from "./components/FormUsuarioStatus";
 
@@ -5,9 +6,9 @@ function App() {
  
 return (
   <div>
-    <FormUsuarioStatus
+   <FormBotaoEnviar>
     
-    ></FormUsuarioStatus>
+   </FormBotaoEnviar>
 </div>
 )
 }
