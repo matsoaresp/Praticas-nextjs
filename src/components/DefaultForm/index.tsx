@@ -1,65 +1,25 @@
 import { useState } from "react";
-import Alert from "../Alert";
+import OnlineStatus from "../OnlineStatus";
+
 
 
 
 export default function DefaultForm() {
 
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [statusAlert, setStatusAlert] = useState<'info' | 'succes' | 'error'>('succes')
+    const [isOnline, setIsOnline] = useState<boolean>(false)
 
-    const handleConfirm = (e: React.FormEvent) => {
-        e.preventDefault()
 
-        if(!email || !senha) {
-            setStatusAlert('error')
-            return
-        }
-
-        setStatusAlert('succes')
-
-    }
     return (
         <div>
-            <form onSubmit={handleConfirm}>
+            <form>
                 <div>
-                    <label>Email</label>
-
-                    <input
-                        type="text"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+                    <label>Nome</label>
                 </div>
-
-                <div>
-                    <label>Senha</label>
-                    <input
-                        value={senha}
-                        type="password"
-                        onChange={(e) => setSenha(e.target.value)}
-                    />
-                </div>
-                <button type="submit">Entrar</button>
-
-                {statusAlert === 'error' && (
-
-                    <Alert
-                        type="error"
-                        message="Preencha email e senha"
-                    />
-                )}
-
-                {statusAlert === 'succes' && (
-                    <Alert
-                    type="succes"
-                    message="Login realizado com sucesso!" 
-                    ></Alert>
-                )}
+                <button type="button" onClick={() => setIsOnline(!isOnline)}>Entrar</button>
+                <OnlineStatus
+                isOnline = {isOnline}
+                ></OnlineStatus>
             </form>
-
-
         </div>
     );
 }

@@ -1,13 +1,11 @@
-import DefaultForm from "./components/DefaultForm"
-import { LoginForm } from "./components/LoginForm"
-import Title from "./components/Title"
+import DefaultForm from "./components/DefaultForm";
 
 function App() {
  
 return (
   <div>
     <DefaultForm>
-      
+
     </DefaultForm>
 </div>
 )
