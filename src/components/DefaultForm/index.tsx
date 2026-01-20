@@ -1,24 +1,29 @@
 import { useState } from "react";
-import OnlineStatus from "../OnlineStatus";
-
-
-
+import Button from "../Button";
 
 export default function DefaultForm() {
 
     const [isOnline, setIsOnline] = useState<boolean>(false)
+    const [changeColors, setChangeColors] = useState<'succes' | 'error'>('succes')
 
 
+    function toggleColor () {
+        setChangeColors (prev => 
+            prev === 'succes' ? 'error' : 'succes'
+        );
+    }
     return (
         <div>
             <form>
                 <div>
-                    <label>Nome</label>
                 </div>
-                <button type="button" onClick={() => setIsOnline(!isOnline)}>Entrar</button>
-                <OnlineStatus
-                isOnline = {isOnline}
-                ></OnlineStatus>
+               <Button
+                type="button"
+                color={changeColors}
+                onClick={toggleColor}
+               >
+                 
+               </Button>
             </form>
         </div>
     );

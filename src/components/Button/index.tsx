@@ -1,29 +1,17 @@
 import style from './style.module.css'
 
-export type ButtonProps = {
+    type ButtonProps = {
+        type: 'button'
+        color: 'succes' | 'error'
+        onClick: () => void;
+    }
 
-    text: string
-    type: 'button' | 'submit' | 'reset'
-    onClick?: () => void
-    disabled: boolean
-    variant: 'primary' | 'secondary' | 'danger'
-}
+export default function Button ({type,color, onClick}: ButtonProps) {
 
-export default function Button ({
-    text, 
-    type = 'button',
-     onClick, 
-     disabled = false, 
-     
-     variant = 'primary'}:ButtonProps) {
 
     return (
-         <div>
-        <button type={type}
-        onClick={onClick}
-         className={`${style.button} ${style[variant]}`}
-        disabled={disabled}>{text}
-        </button>
-    </div>
+        <div>
+            <button type={type} className={style[color]} onClick={onClick}>Clique aqui</button>
+        </div>
     )
 }

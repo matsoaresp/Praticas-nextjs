@@ -1,14 +1,9 @@
-.primary {
+.succes {
   background-color: #2563eb;
   color: white;
 }
 
-.secondary {
-  background-color: #e5e7eb;
-  color: #111827;
-}
-
-.danger {
+.error {
   background-color: #dc2626;
   color: white;
 }
