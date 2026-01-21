@@ -1,3 +1,4 @@
+import FormBotaoInteligente from "./components/FormBotaoInteligente";
 import FormContador from "./components/FormContador";
 
 
@@ -5,9 +6,9 @@ function App() {
  
 return (
   <div>
-  <FormContador>
-
-  </FormContador>
+    <FormBotaoInteligente>
+      
+    </FormBotaoInteligente>
 </div>
 )
 }
