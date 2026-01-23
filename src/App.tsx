@@ -1,13 +1,13 @@
 import FormButtonCount from "./components/FormButtonCount";
+import FormParNumber from "./components/FormParNumber";
 
 function App() {
  
 return (
   <div>
-  
-    <FormButtonCount>
+      <FormParNumber>
 
-    </FormButtonCount>
+      </FormParNumber>
 </div>
 )
 }
