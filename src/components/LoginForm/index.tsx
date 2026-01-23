@@ -1,59 +1,49 @@
-import { useState } from 'react'
-import { DefaultInput } from '../DefaultInput'
-import style from './style.module.css'
-import Button from '../Button'
-export function LoginForm ( ){
+import { useState } from "react";
+import StatusBadge from "../StatusBadge";
 
+
+export function LoginForm() {
+    
     const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
-    const [variant, setVariant] = useState<'primary' | 'secondary' | 'danger'>('primary')
+    const [password, setPassword] = useState('')
+    const [status, setStatus] = useState<'succes' | 'warning' | 'error'>('succes')
 
+    const handleConfirm = (e: React.FormEvent) => {
+  e.preventDefault();
 
+  if (!email || !password) {
+    alert('Preencha todos os campos');
+    setStatus('error');
+    return;
+  }
+  setStatus('succes');
+};
 
-    const handleConfirm = () => {
-       
-        if (!email){
-            alert('Preencha o campo e-mail')
-            setVariant('danger')
-            return
-            
-        }
-        if (!senha){
-            alert('Preencha o campo senha!')
-            setVariant('danger')
-            return 
-        }
-        setVariant('primary')
+     return (
+    <div>
+      <form onSubmit={handleConfirm}>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
 
-        alert(`Dados do login Email: ${email} Senha: ${senha}`)
-    }
-return (
-    <div className={style.formContainer}>
-       <form  className={style.form}> 
-       <DefaultInput 
-       labelText='Email' 
-       id='email' 
-       type = 'text'
-       value={email}
-       onChange={(e) => setEmail(e.target.value)}
-       placeholder='Digite seu nome'/>
-       
-       <DefaultInput 
-       labelText='Senha' 
-       id = 'senha' 
-       value={senha}
-       onChange={(e) => setSenha(e.target.value)}
-       type='password' 
-       placeholder='Digite sua senha'/>
+        <div>
+          <label>Senha</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
 
-        <Button 
-        onClick={handleConfirm}
-       
-        type='button' 
-        text='Confirmar'
-        variant={variant}
-        disabled= {false}/>
-       </form>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <StatusBadge status={status} />
     </div>
-)
+  );
 }
